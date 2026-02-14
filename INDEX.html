@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>COMIDAS TOY </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo">
+        <img src="IMG/logo.png" alt="Logo Comidas Toy">
+        <div class="titulo">
+            <h1></h1>
+            <p>"¡Un verdadero sabor siempre está ahí para ti!"</p>
+        </div>
+    </div>
+</header>
+
+
+
+<div class="hero">
+   <h2 class="toy-text pixar" id="toyText">BIENVENIDOS</h2>
+</div>>
+
+<section class="menu">
+    <h2>¿Que quieres hacer hoy?</h2>
+
+<div class="menu-botones">
+
+   <a href="IMG/mn.pdf" target="_blank" class="btn-menu">
+    <img src="IMG/img5.png" alt="">
+    <span>VER NUESTRO MENÚ</span>
+</a>
+
+    <a href="https://wa.me/573104600901" target="_blank" class="btn-menu">
+        <img src="IMG/img3.png" alt="">
+        <span>DOMICILIOS</span>
+    </a>
+
+   <a href="#" onclick="abrirRedes()" class="btn-menu">
+    <img src="IMG/img4.png" alt="">
+    <span>REDES SOCIALES</span>
+</a>
+
+</div>
+<section class="contacto" id="contacto">
+    <h2>📍 Encuéntranos</h2>
+
+    <div class="info-contacto">
+        <p><strong>📌 Dirección:</strong> MZ 3 CS 17 VILLA NAVARRA CUBA </p>
+        <p><strong>📞 Teléfono:</strong> +57 310 4600901</p>
+        <p><strong>🕒 Horario:</strong> Lunes a Domingo 5:00pm - 11:00pm</p>
+    </div>
+
+<a href="https://maps.app.goo.gl/377S36yh5DeJNApG6"
+   target="_blank"
+   class="btn-ubicacion">
+   📍 ABRIR UBICACIÓN
+</a>
+<footer class="footer">
+    <p>© 2026 COMIDASTOY 🍔🧸</p>
+
+    <img src="IMG/wd1.png" alt="Woody" class="woody-footer">
+
+</footer>
+
+
+
+<div id="popupRedes" class="popup">
+    <div class="popup-contenido">
+
+        <!-- WOODY -->
+        <img src="IMG/wd1.png" class="woody-popup" alt="Woody">
+
+        <span class="cerrar" onclick="cerrarRedes()">✖</span>
+
+        <h2>🌟 ¡Síguenos! 🌟</h2>
+
+        <a href="https://www.instagram.com/comidastoy/" target="_blank" class="btn-instagram">
+            📸 Instagram
+        </a>
+
+        <a href="https://www.tiktok.com/@comidas.toy" target="_blank" class="btn-tiktok">
+            🎵 TikTok
+        </a>
+
+    </div>
+</div>
+
+<script>
+function abrirRedes() {
+    document.getElementById("popupRedes").style.display = "flex";
+}
+
+function cerrarRedes() {
+    document.getElementById("popupRedes").style.display = "none";
+}
+</script>
+
+</body>
+</html>

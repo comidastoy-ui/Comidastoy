@@ -1,0 +1,723 @@
+/* ===================== */
+/*  ESTILOS GENERALES    */
+/* ===================== */
+
+body {
+    margin: 0;
+    font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', sans-serif;
+    background: #f4f4f4;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+/*NUESTRO MENU*/
+
+.menu h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    color: skyblue ;
+    text-shadow: 2px 2px 0 BLACK;
+}
+/* ===================== */
+/*  HEADER + LOGO        */
+/* ===================== */
+
+.header {
+    background: linear-gradient(90deg, #1e90ff, #00bfff);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.logo img {
+    width: 180px;
+    max-width: 200px;
+    animation: entradaToy 1.2s ease-out;
+    transition: transform 0.4s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1) rotate(-3deg);
+}
+
+.titulo h1 {
+    font-size: 3rem;
+    margin: 0;
+    letter-spacing: 3px;
+}
+
+.titulo p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* ===================== */
+/*  NAV                 */
+/* ===================== */
+
+nav {
+    background: #ffd700;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    margin: 0 15px;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    color: #e63946;
+}
+
+/* BOTÓN MENÚ MÓVIL */
+.menu-toggle {
+    display: none;
+    background: #ffd700;
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* ===================== */
+/*  HERO                */
+/* ===================== */
+
+.hero {
+    background:
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        url("../img/toy1.png") center / cover no-repeat;
+
+    height: 150vh;          /* 🔥 aquí se agranda */
+    min-height: 150px;     /* mínimo en pantallas pequeñas */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 5px black;
+}
+
+    }
+
+/* ===================== */
+/*  MENÚ / CARDS         */
+/* ===================== */
+
+.menu {
+    padding: 40px;
+    text-align: center;
+}
+
+.menu h2 {
+    font-size: 2.5rem;
+    color: #1e90ff;
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #FFFFFF ; /* amarillo suave */
+    border-radius: 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    padding: 20px;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 270px;          /* 🔥 más grande */
+    object-fit: cover;      /* no se deforma */
+    border-radius: 20px;
+}
+
+.card h3 {
+    text-align: center;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.card span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #1e90ff;
+    font-size: 1.2rem;
+}
+
+/* ===================== */
+/*  FOOTER              */
+/* ===================== */
+
+footer {
+    background: #1e90ff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* ===================== */
+/*  ANIMACIONES          */
+/* ===================== */
+
+@keyframes entradaToy {
+    0% {
+        transform: scale(0) rotate(-15deg);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.1) rotate(5deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) rotate(0);
+    }
+}
+
+/* ===================== */
+/*  RESPONSIVE (MÓVIL)   */
+/* ===================== */
+
+@media (max-width: 768px) {
+
+    .logo {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo img {
+        width: 140px;
+    }
+
+    .titulo h1 {
+        font-size: 2rem;
+    }
+
+    .titulo p {
+        font-size: 1rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin: 10px auto;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav.activo {
+        display: flex;
+    }
+
+    nav a {
+        padding: 10px;
+        font-size: 1.1rem;
+    }
+
+    .card {
+        animation: none;
+    }
+}
+
+/* ===================== */
+/*  ANIMACION LETRA BIENVENIDOS   */
+/* ===================== */
+
+.toy-text {
+    
+    font-family: 'Bangers', cursive;
+    font-size: 4rem;
+    text-align: center;
+    letter-spacing: 5px;
+    color: #FFD700;
+
+    text-shadow:
+        0 0 10px #FFD700,
+        0 0 25px #ff0000,
+        0 0 60px #1e90ff;
+}
+
+/* ENTRADA CINE PIXAR */
+.pixar {
+    animation: pixarEntrada 2.2s ease-out forwards;
+}
+
+@keyframes pixarEntrada {
+    0% {
+        transform: scale(3);
+        opacity: 0;
+        filter: blur(20px);
+    }
+    60% {
+        opacity: 1;
+        filter: blur(5px);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+/* LETRAS */
+.toy-text span {
+    display: inline-block;
+    animation: letraPixar 0.5s forwards;
+
+
+}
+
+@keyframes letraPixar {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .toy-text {
+        font-size: 2.5rem;
+        letter-spacing: 3px;
+    }
+}
+.toy-text {
+    opacity: 1;
+}
+/* ===================== */
+/* MENU ESTILO JUGUETE   */
+/* ===================== */
+
+.toy-menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: linear-gradient(90deg, #ffd700, #ffcc00);
+    padding: 15px;
+}
+
+/* BOTONES */
+.toy-btn {
+    display: inline-block;
+    cursor: pointer;
+    font-family: 'Fredoka', 'Baloo 2', sans-serif;
+    background: linear-gradient(145deg, #ff3b3b, #ff6b6b);
+    color: white;
+    padding: 14px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    box-shadow:
+        0 6px 0 #c92a2a,
+        0 10px 15px rgba(0,0,0,0.3);
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* HOVER JUGUETE */
+.toy-btn:hover {
+    transform: translateY(-6px) scale(1.08);
+    box-shadow:
+        0 10px 0 #c92a2a,
+        0 18px 25px rgba(0,0,0,0.4);
+}
+
+/* CLICK JUGUETE */
+.toy-btn:active {
+    transform: translateY(3px);
+    box-shadow:
+        0 3px 0 #c92a2a,
+        0 5px 8px rgba(0,0,0,0.3);
+}
+
+/* BOTÓN MENÚ MÓVIL */
+.menu-toggle {
+    display: none;
+    background: #ff3b3b;
+    color: white;
+    font-size: 2rem;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+        margin: 10px auto;
+    }
+
+    .toy-menu {
+        display: none;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .toy-menu.activo {
+        display: flex;
+    }
+
+    .toy-btn {
+        text-align: center;
+        font-size: 1.1rem;
+    }
+}
+/*BOTONES ENLACES DIRECTOS*/
+.menu-botones {
+    display: flex;
+    justify-content: center;   /* ⬅ centra horizontal */
+    align-items: center;       /* ⬅ centra vertical */
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+/* BOTONES JUGUETE */
+.btn-menu {
+    background: linear-gradient(145deg, #ff3b3b, #ff6b6b);
+    color: white;
+    font-family: 'Fredoka', 'Baloo 2', sans-serif;
+
+    width: 260px;
+    height: 120px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    border-radius: 30px;
+    text-decoration: none;
+
+    box-shadow:
+        0 8px 0 #c92a2a,
+        0 15px 25px rgba(0,0,0,0.3);
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.btn-menu img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+/* EFECTO JUGUETE */
+.btn-menu:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow:
+        0 12px 0 #c92a2a,
+        0 20px 30px rgba(0,0,0,0.4);
+}
+
+.btn-menu:active {
+    transform: translateY(4px);
+    box-shadow:
+        0 4px 0 #c92a2a,
+        0 6px 10px rgba(0,0,0,0.3);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .btn-menu {
+        width: 90%;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+}
+.btn-menu {
+    animation: entradaBoton 0.8s ease forwards;
+    opacity: 0;
+}
+
+.btn-menu:nth-child(1) { animation-delay: 0.2s; }
+.btn-menu:nth-child(2) { animation-delay: 0.4s; }
+.btn-menu:nth-child(3) { animation-delay: 0.6s; }
+
+
+@keyframes entradaBoton {
+    from {
+        opacity: 0;
+        transform: translateY(60px) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+.btn-menu::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.4);
+    transform: skewX(-25deg);
+    animation: brillo 3s infinite;
+}
+
+@keyframes brillo {
+    0% { left: -100%; }
+    50% { left: 150%; }
+    100% { left: 150%; }
+}
+.btn-menu {
+    animation: entradaBoton 0.8s ease forwards,
+               rebote 7s ease-in-out infinite;
+}
+
+@keyframes rebote {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+.contacto {
+       padding: 60px 20px;
+    text-align: center;
+     .contacto {
+    background: linear-gradient(#87CEEB, #4ecdc4);
+    padding-top: 60px;   /* espacio interno arriba */
+}
+    
+    position: relative;
+}
+.contacto::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 10%;
+    width: 120px;
+    height: 60px;
+    background: white;
+    border-radius: 50px;
+    box-shadow: 20px 10px 0 white, 80px 0px 0 white;
+}
+
+}
+
+.contacto h2 {
+    font-size: 3rem;
+    color: #FFD700;
+    text-shadow:
+        3px 3px 0 #ff3b3b,
+        6px 6px 0 #1e90ff;
+    margin-bottom: 40px;
+}
+
+.info-contacto {
+    animation: flotar 3s ease-in-out infinite;
+}
+
+@keyframes flotar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+
+
+.btn-ubicacion {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 20px 40px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    font-family: 'Fredoka', 'Baloo 2', sans-serif;
+
+    color: white;
+    text-decoration: none;
+
+    background: linear-gradient(145deg, #1e90ff, #4ecdc4);
+    border-radius: 30px;
+
+    box-shadow:
+        0 10px 0 #0066cc,
+        0 20px 30px rgba(0,0,0,0.3);
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-ubicacion:hover {
+    transform: translateY(-8px);
+}
+
+.btn-ubicacion:active {
+    transform: translateY(4px);
+}
+.footer {
+    position: relative;
+    background: #ffcc00;
+    padding: 110px 20px;
+    text-align: center;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+
+.woody-footer {
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+    width: 450px;
+}
+/*REDES*/
+
+
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-contenido {
+    background: linear-gradient(#87CEEB, #4ecdc4);
+    padding: 40px;
+    border-radius: 25px;
+    text-align: center;
+    width: 320px;
+    position: relative;
+    border: 6px solid #ffcc00;
+    box-shadow: 0 15px 0 #e67e22;
+    animation: aparecer 0.4s ease;
+}
+
+.popup-contenido h2 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 22px;
+    text-shadow: 2px 2px #e74c3c;
+}
+
+/* BOTÓN INSTAGRAM */
+.btn-instagram {
+    display: block;
+    margin: 12px 0;
+    text-decoration: none;
+    background: #E1306C;
+    color: white;
+    padding: 12px;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 5px 0 #a82352;
+    transition: all 0.2s ease;
+}
+
+/* BOTÓN TIKTOK */
+.btn-tiktok {
+    display: block;
+    margin: 12px 0;
+    text-decoration: none;
+    background: #000000;
+    color: white;
+    padding: 12px;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 5px 0 #333;
+    transition: all 0.2s ease;
+}
+
+.btn-instagram:hover,
+.btn-tiktok:hover {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #555;
+}
+
+/* BOTÓN CERRAR */
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    background: #ff4757;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50%;
+    box-shadow: 0 3px 0 #c0392b;
+}
+
+/* Animación */
+@keyframes aparecer {
+    from {
+        transform: scale(0.6);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.popup-contenido {
+    background: linear-gradient(#87CEEB, #4ecdc4);
+    padding: 40px;
+    border-radius: 25px;
+    text-align: center;
+    width: 320px;
+    position: relative;
+    border: 6px solid #ffcc00;
+    box-shadow: 0 15px 0 #e67e22;
+    animation: aparecer 0.4s ease;
+    overflow: visible;
+}
+
+/* WOODY ASOMÁNDOSE */
+.woody-popup {
+    position: absolute;
+    bottom: -10px;
+    left: -90px;   /* empieza fuera */
+    width: 120px;
+    animation: asomar 0.8s ease forwards;
+}
+
+/* Animación Woody */
+@keyframes asomar {
+    from {
+        left: -160px;
+    }
+    to {
+        left: -60px;
+    }
+}
